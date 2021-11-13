@@ -9,6 +9,5 @@ class Home(TemplateView):
     template_name="home.html"
     
 # view for the managers page
-class Manager_Page(View):
-    def get(self, request):
-        return HttpResponse("Schedule Manager Page, view schedule, make schedule")
+class Manager_Page(TemplateView):
+    template_name="manager_page.html"
