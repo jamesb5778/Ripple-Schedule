@@ -13,7 +13,7 @@ class Employee(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     
     def __str__(self):
-        return self.LastName
+        return self.LastName + " " + self.FirstName + " " +self.JobTitle
     
     class Meta:
         ordering = ["LastName"]
