@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views.generic.base import TemplateView
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.views.generic import DetailView
 from .models import Employee
 
 # Create your views here.
@@ -32,6 +33,18 @@ class Employee_Create(CreateView):
     model = Employee
     fields = ['EmpNumber', 'FirstName', 'LastName', 'JobTitle', 'Username', 'Password']
     template_name = "employee_create.html"
+    success_url = "/employees/"
+
+# view to view a single employee
+class Employee_Detail(DetailView):
+    model = Employee
+    template_name = "employee_detail.html"
+    
+# view to update a single employee
+class Employee_Update(UpdateView):
+    model = Employee
+    fields = ['EmpNumber', 'FirstName', 'LastName', 'JobTitle', 'Username', 'Password']
+    template_name = "employee_update.html"
     success_url = "/employees/"
 
 # view for the schedule page
