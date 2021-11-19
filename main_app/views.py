@@ -1,10 +1,6 @@
 from django.shortcuts import render
-import calendar
-from calendar import HTMLCalendar
-from django.views import View
-from django.http import HttpResponse
 from django.views.generic.base import TemplateView
-from django.views.generic import ListView
+from django.views.generic.edit import CreateView
 from .models import Employee
 
 # Create your views here.
@@ -30,7 +26,14 @@ class Employees_View(TemplateView):
             context["employees"] = Employee.objects.all()
             context["header"] = "All Employees"
         return context
-    
+
+# view to add employees to the database
+class Employee_Create(CreateView):
+    model = Employee
+    fields = ['EmpNumber', 'FirstName', 'LastName', 'JobTitle', 'Username', 'Password']
+    template_name = "employee_create.html"
+    success_url = "/employees/"
+
 # view for the schedule page
 class Schedule_View(TemplateView):
     template_name = "schedule_page.html"

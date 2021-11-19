@@ -3,7 +3,7 @@
     <h1>View All the employees in on this page. Ability to add or delete or change employees here</h1>
 
     <div class = "table-container">
-        <table class = "table">
+        <table class = "table is-bordered is-fullwidth is-hoverable">
             <thead>
                 <tr>
                     <th><abbr title = "EmpNumber">EMP #</abbr></th>
@@ -37,7 +37,7 @@
                 </tr>
             {% endfor %}
          </table>
-         
+         <a class = "button" href="{% url 'employee_create' %}">Add Employee</a>
     </div>
 
 {% endblock %}

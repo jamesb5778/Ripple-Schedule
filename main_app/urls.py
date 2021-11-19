@@ -14,6 +14,7 @@ urlpatterns = [
     path('employees/', views.Employees_View.as_view(), name = "employees_list"),
     #path to view only one employee
     #path to create an employee 
+    path ('employees/new/', views.Employee_Create.as_view(), name = "employee_create"),
     #path to update an employee
     #path to delete an employee
 ]
