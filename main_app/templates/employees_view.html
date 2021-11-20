@@ -12,6 +12,8 @@
                     <th>Job Title</th>
                     <th>Username</th>
                     <th>Password</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
                 </tr>
             </thead>
             {% for employee in employees %}
@@ -33,6 +35,12 @@
                     </td>
                     <td>
                         {{employee.Password}}
+                    </td>
+                    <td>
+                        <a class = "button is-warning"  href = "{% url 'employee_update' employee.pk %}">Edit</a>
+                    </td>
+                    <td>
+
                     </td>
                 </tr>
             {% endfor %}
