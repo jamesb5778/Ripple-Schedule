@@ -1,9 +1,13 @@
-from django.urls import path
+from django.urls import path, include
 from . import views
 
 urlpatterns = [
     # path for the home page.
     path('', views.Home.as_view(), name = "home"),
+    # path for admin
+    #path('admin/', admin.site.urls),
+    #path for user accounts
+    #path('accounts/', include('django.contrib.auth.urls')),
     
     # All the Paths for Employee including View All, View One, Create One, Update One, & Delete One
     #path to view all the employees
