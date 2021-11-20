@@ -15,6 +15,6 @@ urlpatterns = [
     #path to update an employee
     path('employees/<int:pk>/update/', views.Employee_Update.as_view(), name = "employee_update"),
     #path to delete an employee
-    path('employees/<int:pk>/update/', views.Employee_Delete.as_view(), name = "employee_delete")
+    path('employees/<int:pk>/delete/', views.Employee_Delete.as_view(), name = "employee_delete")
 ]
 
