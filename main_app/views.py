@@ -47,7 +47,8 @@ class Employee_Update(UpdateView):
     template_name = "employee_update.html"
     success_url = "/employees/"
 
-# view for the schedule page
-class Schedule_View(TemplateView):
-    template_name = "schedule_page.html"
-    
+# view to delete a single employee
+class Employee_Delete(DeleteView):
+    model = Employee
+    template_name = "employee_delete.html"
+    success_url = "/employees/"

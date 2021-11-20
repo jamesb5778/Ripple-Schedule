@@ -1,7 +1,10 @@
 {% extends 'base.html' %} {% block content %}
 
     <h1>View All the employees in on this page. Ability to add or delete or change employees here</h1>
-
+    <div class = "top-button">
+        <a class = "button is-primary is-large" href="{% url 'employee_create' %}">Add Employee</a>
+    </div>
+    <br>
     <div class = "table-container">
         <table class = "table is-bordered is-fullwidth is-hoverable">
             <thead>
@@ -40,12 +43,14 @@
                         <a class = "button is-warning"  href = "{% url 'employee_update' employee.pk %}">Edit</a>
                     </td>
                     <td>
-
+                        <a class = "button is-danger"  href = "{% url 'employee_delete' employee.pk %}">Delete</a>
                     </td>
                 </tr>
             {% endfor %}
          </table>
-         <a class = "button" href="{% url 'employee_create' %}">Add Employee</a>
+         <div class = "bottom-button">
+            <a class = "button is-primary is-large" href="{% url 'employee_create' %}">Add Employee</a>
+        </div>
     </div>
 
 {% endblock %}

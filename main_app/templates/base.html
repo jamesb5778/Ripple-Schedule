@@ -10,13 +10,13 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{% static 'styles/main.css' %}" />
     <script src="{% static 'scripts/main.js' %}" defer></script>
-    <title>Ripple Scheduler</title>
+    <title>Ripple Management</title>
 </head>
 <body>
     <!---->
     <nav class = "navbar navbar-default navbar-fixed-top" role = "navigation" aria-label = "main navigation">
         <div class = "navbar-brand">
-            <a class = "navbar-item" href="/">Ripple Scheduler</a>
+            <a class = "navbar-item" href="/">Ripple Management</a>
             <a role = "button" class = "navbar-burger" aria-label = "menu" aria-expanded = "false">
                 <span aria-hidden = "true"></span>
                 <span aria-hidden = "true"></span>
@@ -25,7 +25,6 @@
         </div>
         <div class = "navbar-menu navbar-start">
             <a class = "navbar-item" href = "/employees/">Employees</a>
-            <a class = "navbar-item" href = "/schedule/">Schedule</a>"
         </div>
     </nav>
     {% block content %}{% endblock %}
