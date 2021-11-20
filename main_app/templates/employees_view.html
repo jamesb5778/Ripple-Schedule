@@ -1,6 +1,6 @@
 {% extends 'base.html' %} {% block content %}
 
-    <h1>View All the employees in on this page. Ability to add or delete or change employees here</h1>
+
     <div class = "top-button">
         <a class = "button is-primary is-large" href="{% url 'employee_create' %}">Add Employee</a>
     </div>
@@ -15,6 +15,7 @@
                     <th>Job Title</th>
                     <th>Username</th>
                     <th>Password</th>
+                    <th>View Employee</th>
                     <th>Edit</th>
                     <th>Delete</th>
                 </tr>
@@ -38,6 +39,9 @@
                     </td>
                     <td>
                         {{employee.Password}}
+                    </td>
+                    <td>
+                        <a class = "button is-info" href = "{% url 'employee_detail' employee.pk %}">View</a>
                     </td>
                     <td>
                         <a class = "button is-warning"  href = "{% url 'employee_update' employee.pk %}">Edit</a>

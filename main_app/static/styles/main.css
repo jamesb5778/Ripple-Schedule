@@ -1,3 +1,16 @@
 body {
-    background-color: 5C5D8D;
+    background-color: #5C5D8D;
+    color: #ffffff;
+	min-height: 100vh;
+
+}
+
+.navbar {
+    background-color: #9AD5CA;
+    color: #ffffff;
+}
+
+.container-intro {
+    font-size: 30px;
+    margin: 50px;
 }

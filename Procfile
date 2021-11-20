@@ -1,1 +1,0 @@
-web: gunicorn ripple_schedule.wsgi

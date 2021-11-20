@@ -1,43 +1,36 @@
 {% extends 'base.html' %} {% block content %}
 
-    <h1>View All the employees in on this page. Ability to add or delete or change employees here</h1>
-
-<div class = "detail__container">
-    <div class =
-    <div class = "table-container">
-        <table class = "table is-bordered is-fullwidth is-hoverable">
-            <thead>
-                <tr>
-                    <th><abbr title = "EmpNumber">EMP #</abbr></th>
-                    <th>Last Name</th>
-                    <th>First Name</th>
-                    <th>Job Title</th>
-                    <th>Username</th>
-                    <th>Password</th>
-                </tr>
-            </thead>
-                <tr>
-                    <td>
-                        {{employee.EmpNumber}}
-                    </td>
-                    <td>
-                        {{employee.LastName}}
-                    </td>
-                    <td>
-                        {{employee.FirstName}}
-                    </td>
-                    <td>
-                        {{employee.JobTitle}}
-                    </td>
-                    <td>
-                        {{employee.Username}}
-                    </td>
-                    <td>
-                        {{employee.Password}}
-                    </td>
-                </tr>
-         </table>
-    </div>
-</div>
+     <table class = "table is-bordered is-hoverable is-fullwidth">
+        <thead>
+            <tr>
+                <th><abbr title = "EmpNumber">EMP #</abbr></th>
+                <th>Last Name</th>
+                <th>First Name</th>
+                <th>Job Title</th>
+                <th>Username</th>
+                <th>Password</th>
+            </tr>
+        </thead>
+            <tr>
+                <td>
+                    {{employee.EmpNumber}}
+                </td>
+                <td>
+                    {{employee.LastName}}
+                </td>
+                <td>
+                    {{employee.FirstName}}
+                </td>
+                <td>
+                    {{employee.JobTitle}}
+                </td>
+                <td>
+                    {{employee.Username}}
+                </td>
+                <td>
+                    {{employee.Password}}
+                </td>
+            </tr>
+    </table>
 
 {% endblock %}
